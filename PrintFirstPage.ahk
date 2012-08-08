@@ -1,7 +1,16 @@
 ;
-; Print the first page of an email
+; Print the first page of a document
 ;
 
 #p::
-Send {Alt Down}fprs{Alt Up}1{Enter}
+Send {Alt Down}fp
+
+; Outlook requires an extra keystroke
+WinGet _ProcessName, ProcessName, A
+If _ProcessName = outlook.exe
+{
+  Send r
+}
+
+Send s{Alt Up}1{Enter}
 return

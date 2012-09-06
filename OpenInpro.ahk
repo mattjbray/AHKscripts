@@ -26,13 +26,16 @@ Send ^3
 
 Sleep 100
 
+; Click in window to enable keyboard shortcuts
+CoordMode Mouse, Relative
+Click 220, 190
+
 ; Minimize existing windows
 Send ^A
 
-Sleep 100
+Sleep 500
 
 ; Click in the search box
-CoordMode Mouse, Relative
 Click 220, 190
 
 ; Select all text

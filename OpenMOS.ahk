@@ -15,7 +15,7 @@ IfWinNotExist, Microsoft Word
 
 WinActivate
 
-Send {Alt Down}hy2{Alt Up}
+Send {Alt}hy2
 
 ; Wait for the "Select Case" window, and exit if it doesn't arrive
 ;WinWaitActive, Select Case,,7
@@ -24,7 +24,6 @@ Send {Alt Down}hy2{Alt Up}
 
 Sleep 100
 
-Send %IRN%{Tab}{Down}{Tab}
-Send mark{Down}{Tab}{Enter}{Enter}
+Send %IRN%{Tab}{Down}{Enter}
 
 return

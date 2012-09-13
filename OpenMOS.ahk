@@ -24,6 +24,12 @@ Send {Alt}hy2
 
 Sleep 100
 
-Send %IRN%{Tab}{Down}{Enter}
+Send %IRN%{Tab}{Down}
+
+; Skip over "foreign attorney" line if not a local case
+If IRN not contains ep,gb
+	Send {Down}
+
+Send {Enter}
 
 return

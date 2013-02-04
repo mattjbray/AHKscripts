@@ -8,8 +8,8 @@ if ErrorLevel
 
 SetTitleMatchMode, RegEx
 
-; Get the Firefox window
-IfWinNotExist, ahk_class MozillaWindowClass
+; Get the Google Chrome window
+IfWinNotExist, Google Chrome
 {
 	return
 }
@@ -17,7 +17,7 @@ IfWinNotExist, ahk_class MozillaWindowClass
 WinActivate
 WinMaximize
 
-WinWaitActive,,,5
+WinWaitActive, Google Chrome,,5
 if ErrorLevel
 	return
 
@@ -25,9 +25,7 @@ Send ^1
 
 Sleep 100
 
-; Click the search box
-CoordMode Mouse, Relative
-Click 1080,105
+Send {Tab}/
 
 Sleep 100
 
